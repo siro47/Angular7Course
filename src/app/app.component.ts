@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-class User {
+export class User {
     id: string;
     name: string;
     desc: string;

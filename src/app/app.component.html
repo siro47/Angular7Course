@@ -1,3 +1,3 @@
 <div *ngFor="let user of users">
-    <span>{{user.name}}</span> - <span>{{user.desc}}</span>
+    <app-custom-card [data]="user"></app-custom-card>
 </div>
