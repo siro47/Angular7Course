@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {User} from "../app.component";
+import {User} from "../admin-layout/users/users.component";
 
 @Component({
     selector: 'app-custom-card',
