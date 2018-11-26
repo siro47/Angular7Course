@@ -17,6 +17,7 @@ import { UsersFormComponent } from './admin-layout/users/users-form/users-form.c
 import { GroupsDetailsComponent } from './admin-layout/groups/groups-details/groups-details.component';
 import { GroupsFormComponent } from './admin-layout/groups/groups-form/groups-form.component';
 import {RouterModule, Routes} from "@angular/router";
+import {FormsModule} from "@angular/forms";
 
 const appRoutes: Routes = [
     { path: 'login', component: LoginComponent},
@@ -53,7 +54,8 @@ const appRoutes: Routes = [
         MatIconModule,
         MatToolbarModule,
         MatButtonModule,
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes),
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]
