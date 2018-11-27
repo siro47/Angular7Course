@@ -18,6 +18,7 @@ import { GroupsDetailsComponent } from './admin-layout/groups/groups-details/gro
 import { GroupsFormComponent } from './admin-layout/groups/groups-form/groups-form.component';
 import {RouterModule, Routes} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 const appRoutes: Routes = [
     { path: 'login', component: LoginComponent},
@@ -56,7 +57,8 @@ const appRoutes: Routes = [
         MatButtonModule,
         RouterModule.forRoot(appRoutes),
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]
