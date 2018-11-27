@@ -27,8 +27,8 @@ export class UsersService {
         new User("6", "Ppal. Skinner", "I love my mum", "./assets/images/skinner.png"),
     ]
     constructor() { }
-    public addNewUser() {
-        this.users.push(new User("7", "Moe", "Prettiest bartender ever", "./assets/images/moe.png"));
+    public addNewUser(data) {
+        this.users.push(new User("7", data.name, data.desc, "./assets/images/moe.png"));
     }
     public removeUser(data) {
         var index = this.users.findIndex(user => {return user.id == data.id});
