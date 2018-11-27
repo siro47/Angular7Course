@@ -1,6 +1,6 @@
 <form [formGroup]="searchForm">
     SEARCH:
-    <input type="text" formControlName="search">
+    <input type="text" name="search" formControlName="search">
 </form>
 <div class="row">
     <div *ngFor="let user of users" class="col-12 col-sm-6">
