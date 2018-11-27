@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {UsersService} from "../users.service";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-users-form',
@@ -12,7 +13,8 @@ export class UsersFormComponent implements OnInit {
     public myForm: FormGroup;
 
     constructor(
-        private usersService: UsersService
+        private usersService: UsersService,
+        private router: Router
     ) { }
 
     ngOnInit() {
@@ -24,6 +26,9 @@ export class UsersFormComponent implements OnInit {
 
     save(value) {
         this.usersService.addNewUser(value)
+
+
+
     }
 
 }

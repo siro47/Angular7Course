@@ -37,8 +37,12 @@ export class UsersService {
     public getUser(id) {
         return this.users.find(user => {return user.id == id});
     }
-    public getUsers() {
-        return this.users;
+    public getUsers(filter) {
+        if (filter) {
+            return this.users.filter(item => item.name.indexOf(filter) > -1);
+        } else {
+            return this.users;
+        }
     }
 
 }

@@ -1,8 +1,12 @@
+<form [formGroup]="searchForm">
+    SEARCH:
+    <input type="text" formControlName="search">
+</form>
 <div class="row">
     <div *ngFor="let user of users" class="col-12 col-sm-6">
         <app-custom-card [data]="user" (removeClicked)="removeUser($event, data)"></app-custom-card>
     </div>
     <div class="col-xs-12">
-        <button md-button class="pull-right" routerLink='./new' (click)="addNewUser()">ADD USER</button>
+        <button md-button class="pull-right" routerLink='./new'>ADD USER</button>
     </div>
 </div>
